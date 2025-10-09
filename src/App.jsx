@@ -1,11 +1,11 @@
 import './App.css'
-import Count from './components/Count'
-import List from './components/List'
-import NameFilter from './components/NameFilter'
+import Form from './components/exercises-day-2/Form'
+import MultiCounter from './components/exercises-day-2/MultiCounter'
+import SelectableList from './components/exercises-day-2/SelectableList'
 
 function App() {
 
-  return <NameFilter/>
+  return <MultiCounter/>
 
 }
 

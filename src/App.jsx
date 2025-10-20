@@ -1,10 +1,10 @@
 import './App.css'
-import Form from './components/exercises-day-4/Form'
-import TodoList from './components/TodoList'
+import OptimizeComponent from './components/exercises-day-6/OptimizeComponent'
+import ProductList from './components/exercises-day-6/ProductList'
 
 function App() {
 
-  return <TodoList/>
+  return <OptimizeComponent/>
 
 }
 

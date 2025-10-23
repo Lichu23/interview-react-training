@@ -1,13 +1,9 @@
-import './App.css'
-import OptimizeComponent from './components/exercises-day-6/OptimizeComponent'
-import ProductList from './components/exercises-day-6/ProductList'
-import TaskList from './components/exercises-day-7/TaskList'
-import UserSearch from './components/exercises-day-7/UserSearch'
+import "./App.css";
+import DoubleCounter from "./components/exercises-day-8/DoubleCounter";
+import FavoriteMovies from "./components/exercises-day-8/FavoriteMovies";
 
 function App() {
-
-  return <UserSearch/>
-
+  return <FavoriteMovies />;
 }
 
-export default App
+export default App;

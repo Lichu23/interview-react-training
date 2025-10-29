@@ -1,9 +1,12 @@
 import "./App.css";
-import DoubleCounter from "./components/exercises-day-8/DoubleCounter";
-import FavoriteMovies from "./components/exercises-day-8/FavoriteMovies";
+import TaskList from "./components/exercises-day-10/TaskList";
+import UserDirectory from "./components/exercises-day-10/UserDirectory";
+import SearchUser from "./components/exercises-day-11/SearchUser";
+import UserList from "./components/exercises-day-9/UserList";
 
 function App() {
-  return <FavoriteMovies />;
+  
+  return <SearchUser/>;
 }
 
 export default App;

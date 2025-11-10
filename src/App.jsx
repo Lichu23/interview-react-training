@@ -1,10 +1,10 @@
 import "./App.css";
-import UserList from "./components/exercises-day-12/UserList";
+import UserTable from "./components/exercises-day-13/UserTable";
 
 
 function App() {
   
-  return <UserList/>;
+  return <UserTable/>;
 }
 
 export default App;

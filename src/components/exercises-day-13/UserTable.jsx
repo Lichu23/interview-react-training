@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function UserTable() {
   const mockUsers = [
@@ -15,21 +15,28 @@ export default function UserTable() {
   ];
 
   const [currentPage, setCurrentPage] = useState(0);
-
-  console.log(currentPage);
+  const [loading, setLoading] = useState(true);
 
   const showUsers = 3;
 
   const totalPage = Math.ceil(mockUsers.length / showUsers);
-  console.log(`TOtalpage: ${totalPage}`)
+
   const startIndex = currentPage * showUsers;
   const endIndex = startIndex + showUsers;
 
-  const displayedUsers = mockUsers.slice(startIndex, endIndex)
+  const displayedUsers = mockUsers.slice(startIndex, endIndex);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
+  if (loading) return <p>Cargando tabla...</p>;
+  if (mockUsers.length === 0) return <p>No users available</p>;
   return (
-    <div>
+    <>
+      <h1>Table</h1>
       <table>
         <thead>
           <tr>
@@ -37,15 +44,17 @@ export default function UserTable() {
             <th>Email</th>
           </tr>
         </thead>
+
         <tbody>
           {displayedUsers.map((user) => (
             <tr key={user.id}>
-              <th>{user.name}</th>
+              <td>{user.name}</td>
               <td>{user.email}</td>
             </tr>
           ))}
         </tbody>
       </table>
+
       <button
         disabled={currentPage === 0}
         onClick={() => setCurrentPage((prev) => prev - 1)}
@@ -58,6 +67,8 @@ export default function UserTable() {
       >
         next
       </button>
-    </div>
+
+      <p>{currentPage} of {totalPage - 1}</p>
+    </>
   );
 }

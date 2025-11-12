@@ -1,10 +1,10 @@
 import "./App.css";
-import UserTable from "./components/exercises-day-13/UserTable";
+import RegisterForm from "./components/exercises-day-14/RegisterForm";
 
 
 function App() {
   
-  return <UserTable/>;
+  return <RegisterForm/>;
 }
 
 export default App;
